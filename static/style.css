@@ -1,0 +1,235 @@
+*{
+    margin:0;
+    padding:0; 
+    font-family: 'Farro', sans-serif; 
+}
+.header{
+    min-height:100vh;
+    height: fit-content;
+
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+    url(./health.jpeg);
+    background-position:center;
+    background-size: cover;
+   
+    
+}
+nav img{
+    width: 120px;
+    
+}
+nav{
+    display:flex;
+    padding:2% 2%;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+.nav-links{
+    flex:1;
+    text-align:right;
+    margin-top: 25px;
+}
+.nav-links ul li{
+    list-styles:none;
+    display:inline-block;
+    padding:4px 12px;
+    position:relative;
+}
+.nav-links ul li a{
+    color:#ffff;
+    text-decoration:none;
+    font-size: 18px;
+}
+.nav-links ul li::after{
+    content:'';
+    width:0%;
+    height:2px;
+    background: #f44336;
+    display: block;
+    margin:auto;
+    transition:0.5s;
+}
+.nav-links ul li:hover::after{
+    width:100%;
+}
+.text-box{
+    width:90%;
+
+    color:#fff;
+    margin-left: 5%;
+    left:50%;
+    
+    text-align:center;
+}
+.text-box h1{
+    font-size:45px;
+}
+.text-box p{
+    margin:10px 0 20px;
+    font-size:17px;
+    color:#fff;
+}
+i.fa {
+    display: none;
+}
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 12px;
+    }
+    .text-box{
+        top:70%;
+    }
+    .text-box p{
+         font-size:10px ;
+    }
+    .nav-links ul li{
+        display:block;
+    }
+    .nav-links{
+        position: absolute;
+        background:#8a4570;
+        height:100vh;
+        width: 200px;
+        top: 0;
+        right:-200px;
+        text-align: left;
+        z-index:2;
+        transition:1s;
+    }
+    i.fa{
+        display:block;
+        color:#fff;
+        margin:10px;
+        font-size: 22px;
+        cursor:pointer;
+    }
+    .nav-links ul{
+        padding:30px;
+    }
+}
+/*------yoga-----*/
+.about{
+    width:100%;
+    margin:auto;
+    text-align: center;
+    
+    background-color: rgba(231, 173, 214, 0.788);
+}
+h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+h2{
+        font-size: 30px;
+        font-weight: 500;
+        padding-top: 10px;
+        padding-bottom: 0px;
+}
+h3{
+    color:rgb(160, 28, 10);
+    font-size:25px;
+    line-height: 22px;
+    padding:7px;
+    margin:10px 0; 
+}
+p{
+   
+    color:#777;
+    font-size:20px;
+    line-height: 22px;
+    padding:10px;
+} 
+
+.yoga img{
+    width:500px;
+    padding:2%;
+    border: 4px solid white;
+}
+.row{
+    margin-top: 5%;
+    justify-content: space-between;
+    
+}
+.yoga{
+    padding :20px 12px;
+    background-color: rgba(69, 89, 180, 0.788);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+    flex-basis: 31%;   
+}
+@media(max-width:700px){
+    .row{
+     flex-direction: column;
+    }
+}
+/*---------cancer-----*/
+.sub-header{
+    height:15vh;
+    width:100%;
+    background-color: rgba(69, 89, 180, 0.788); 
+    
+  
+}
+.cancer h1{
+    text-align: center;
+}
+.cancer{
+    margin:0;
+    padding:0;
+    text-align: center;
+    background-color: rgba(231, 173, 214, 0.788);
+}
+table{
+    color:white;
+    background-color: rgb(8,49,80);
+    font-size:16px;
+    font-family:serif;
+    margin-left: 35%;
+}
+table, tr, th {
+    border: 4px solid white;
+}
+td{
+    padding:1%;
+}
+#number{
+    width:80%;
+    padding: 5px;
+    border-radius: 5%;
+    outline:0;
+    border:1px solid lightgrey;
+
+} 
+@media(max-width:700px){
+    input[type=number]{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        resize: vertical;
+      }
+      
+      /* Style the label to display next to the inputs */
+      td {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+      }
+      
+      /* Style the submit button */
+      input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        float: right;
+      }
+    }
+
+  

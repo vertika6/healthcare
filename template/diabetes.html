@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <metaname="viewport" content="with=device-width,initial-scale=1.0">
+        <title>Cancer</title>
+        <link rel="stylesheet"href="{{ url_for('static', filename='style.css') }}" type="text/css">  
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap" 
+        rel="stylesheet"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+        <body>
+            <section class="sub-header">
+                <nav>
+                    <img src="../static/logo.jpg"></a>
+                    <div class="nav-links" id="navLinks">
+                       <i class="fa fa-times" onclick="hideMenu()"></i>
+                       <ul>
+                        <li><a href="{{url_for('home')}}">HOME</a></li>  
+                        <li><a href="{{url_for('cancer')}}">CANCER </a></li> 
+                        <li><a href="{{url_for('heart')}}">HEART </a></li>
+                       
+                        <li><a href="{{url_for('diabetes')}}">DIABETES</a></li> 
+                        <li><a href="{{url_for('kidney')}}">KIDNEY</a></li>
+                        
+                        <li><a href="{{url_for('yoga')}}">YOGA</a></li>
+                          
+                       </ul>    
+                    </div>  
+                    <i class="fa fa-bars" onclick="showMenu()" ></i>  
+                </nav>
+            </section>   
+            <section class="cancer">
+                <form action="/result" method="POST">
+            <h1>Please Fill Out The Details</h1>
+            <table class="details" cell padding="10">
+                <tr>
+                    <td>Pregnancies :</td>
+                    <td><input type="number" min="0" id="number" name="pregnancies"</td>
+                </tr>
+                <tr>
+                    <td>Glucose :</td>
+                    <td><input type="number" min="0" id="number" name="glucose"</td>
+                </tr>
+                <tr>
+                    <td>BloodPressure :</td>
+                    <td><input type="number" min="0" id="number" name="bloodpressure"</td>
+                </tr>
+                <tr>
+                    <td>SkinThickness :</td>
+                    <td><input type="number" min="0" id="number" name="skinthickness"</td>
+                </tr>
+                <tr>
+                    <td>Insulin :</td>
+                    <td><input type="number" min="0" id="number" name="insulin"</td>
+                </tr>
+                <tr>
+                    <td>BMI :</td>
+                    <td><input type="number" min="0" id="number" name="bmi"</td>
+                </tr>
+                <tr>
+                    <td>DiabetesPedigreeFunction :</td>
+                    <td><input type="number" min="0" id="number" name="diabetespedigreefunction"</td>
+                </tr>
+                <tr>
+                    <td>Age :</td>
+                    <td><input type="number" min="0" id="number" name="age"</td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <input type="submit" value="Predict">
+                        &nbsp;&nbsp;<input type="submit"
+                        value="Reset">
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </section>
+        <script>
+            var navLinks=document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right="0";
+            }
+            function hideMenu(){
+                navLinks.style.right="-200px";
+            }
+        </script>
+    </body>
+</html>

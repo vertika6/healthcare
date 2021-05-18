@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <metaname="viewport" content="with=device-width,initial-scale=1.0">
+        <title>Cancer</title>
+        <link rel="stylesheet"href="{{ url_for('static', filename='style.css') }}" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap" 
+        rel="stylesheet"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+        <body>
+            <section class="sub-header">
+                <nav>
+                    <img src="../static/logo.jpg"></a>
+                    <div class="nav-links" id="navLinks">
+                       <i class="fa fa-times" onclick="hideMenu()"></i>
+                       <ul>
+                        <li><a href="{{url_for('home')}}">HOME</a></li>  
+                        <li><a href="{{url_for('cancer')}}">CANCER </a></li> 
+                        <li><a href="{{url_for('heart')}}">HEART </a></li>
+                       
+                        <li><a href="{{url_for('diabetes')}}">DIABETES</a></li> 
+                        <li><a href="{{url_for('kidney')}}">KIDNEY</a></li>
+                        
+                        <li><a href="{{url_for('yoga')}}">YOGA</a></li> 
+                          
+                       </ul>    
+                    </div>  
+                    <i class="fa fa-bars" onclick="showMenu()" ></i>  
+                </nav>
+            </section>   
+        <section class="cancer">
+            <form action="/result" method="POST">
+            <h1>Please Fill Out The Details</h1>
+            <table class="details" cell padding="10">
+                <tr>
+                    <td>Age :</td>
+                    <td><input type="number" min="0" id="number" name="age"</td>
+                </tr>
+                <tr>
+                    <td>Trestbps :</td>
+                    <td><input type="number" min="0" id="number" name="trestbps"</td>
+                </tr>
+                <tr>
+                    <td>Serum cholestoral :</td>
+                    <td><input type="number" min="0" id="number" name="chol"</td>
+                </tr>
+                <tr>
+                    <td>Thalach :</td>
+                    <td><input type="number" min="0" id="number" name="thalach"</td>
+                </tr>
+                <tr>
+                    <td>Oldpeak :</td>
+                    <td><input type="number" min="0" id="number" name="oldpeak"</td>
+                </tr>
+                <tr>
+                    <td><label for="sex">Sex :</label></td>
+                    <td>
+                    <select id="number" name="sex">
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                    </select>
+                    </td>
+                </tr>
+
+
+
+
+                    
+                
+                <tr>
+                    <td><label for="chestpain">Chest Pain Type :</label></td>
+                    <td>
+                        <select id="chestpain" name="cp">
+                            <option value="0">Typical Angina</option>
+                            <option value="1">Atypical Angina</option>
+                            <option value="2">Non-anginal Pain</option>
+                            <option value="3">Asymptomatic</option>
+                        </select>
+                    
+                    </td>
+                </tr>
+               
+                
+                <tr>
+                    <td><label for="FBS">FastBloodSugar>120:</label></td>
+                    <td>
+                    <select id="number" name="fbs">
+                        <option value="1">True</option>
+                        <option value="0">False</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="rstecg">Restecg measure:</label></td>
+                    <td>
+                    <select id="number" name="rstecg">
+                        <option value="0">Normal</option>
+                        <option value="1">ST-T wave abnormality</option>
+                        <option value="2">left ventricular hypertrophy</option>
+                    </select>
+                    </td>
+                </tr>
+                
+               
+                <tr>
+                    <td><label for="exang">Exang:</label></td>
+                    <td>
+                    <select id="number" name="exang">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                    <td><label for="slope">Slope:</label></td>
+                    <td>
+                    <select id="number" name="slope">
+                        <option value="0">Unslopping</option>
+                        <option value="1">Flat</option>
+                        <option value="2">Downsloping</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ca">Major values:</label></td>
+                    <td>
+                    <select id="number" name="ca">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="thal">Thalassemia:</label></td>
+                    <td>
+                    <select id="number" name="thal">
+                        <option value="3">Normal</option>
+                        <option value="6">Fixed defect</option>
+                        <option value="7">reversable defect</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td align="center" colspan="2">
+                        <input type="submit" value="Predict">
+                        &nbsp;&nbsp;<input type="submit"
+                        value="Reset">
+                    </td>
+                </tr>
+                
+            </table>
+            </form>
+        </section>
+        <script>
+            var navLinks=document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right="0";
+            }
+            function hideMenu(){
+                navLinks.style.right="-200px";
+            }
+        </script>
+    </body>
+</html>

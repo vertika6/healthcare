@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <metaname="viewport" content="with=device-width,initial-scale=1.0">
+        <title>Cancer</title>
+        <link rel="stylesheet"href="{{ url_for('static', filename='style.css') }}" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap" 
+        rel="stylesheet"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+        <body>
+            <section class="sub-header">
+                <nav>
+                    <img src="../static/logo.jpg"></a>
+                    <div class="nav-links" id="navLinks">
+                       <i class="fa fa-times" onclick="hideMenu()"></i>
+                       <ul>
+                          <li><a href="{{url_for('home')}}">HOME</a></li>  
+                          <li><a href="{{url_for('cancer')}}">CANCER </a></li> 
+                          <li><a href="{{url_for('heart')}}">HEART </a></li>
+                         
+                          <li><a href="{{url_for('diabetes')}}">DIABETES</a></li> 
+                          <li><a href="{{url_for('kidney')}}">KIDNEY</a></li>
+                          
+                          <li><a href="{{url_for('yoga')}}">YOGA</a></li> 
+                          
+                       </ul>    
+                    </div>  
+                    <i class="fa fa-bars" onclick="showMenu()" ></i>  
+                </nav>
+            </section>   
+        <section class="cancer">
+            <form action="/result" method="POST">
+            <h1>Please Fill Out The Details</h1>
+            <table class="details" cell padding="10">
+                <tr>
+                    <td>Radius_mean :</td>
+                    <td><input type="number" min="0" id="number" name="radius"</td>
+                </tr>
+                <tr>
+                    <td>Texture_mean :</td>
+                    <td><input type="number" min="0" id="number" name="texture"</td>
+                </tr>
+                <tr>
+                    <td>Perimeter_mean :</td>
+                    <td><input type="number" min="0" id="number" name="perimeter"</td>
+                </tr>
+                <tr>
+                    <td>Area_mean :</td>
+                    <td><input type="number" min="0" id="number" name="area"</td>
+                </tr>
+                <tr>
+                    <td>Smoothness_mean :</td>
+                    <td><input type="number" min="0" id="number" name="smoothness"</td>
+                </tr>
+                <tr>
+                    <td>Compactness_mean :</td>
+                    <td><input type="number" min="0" id="number" name="compactness"</td>
+                </tr>
+                <tr>
+                    <td>Concavity_mean :</td>
+                    <td><input type="number" min="0" id="number" name="concavity"</td>
+                </tr>
+                <tr>
+                    <td>Concave points_mean :</td>
+                    <td><input type="number" min="0" id="number" name="concave points"</td>
+                </tr>
+                <tr>
+                    <td>Symmetry_mean :</td>
+                    <td><input type="number" min="0" id="number" name="symmetry"</td>
+                </tr>
+                <tr>
+                    <td>Fractal_dimension_mean :</td>
+                    <td><input type="number" min="0" id="number" name="fractal_dimension"</td>
+                </tr>
+                <tr>
+                    <td>Radius_se :</td>
+                    <td><input type="number" min="0" id="number" name="radius_se"</td>
+                </tr>
+                <tr>
+                    <td>Texture_se :</td>
+                    <td><input type="number" min="0" id="number" name="texture_se"</td>
+                </tr>
+                <tr>
+                    <td>Perimeter_se :</td>
+                    <td><input type="number" min="0" id="number" name="perimeter_se"</td>
+                </tr>
+                <tr>
+                    <td>Area_se :</td>
+                    <td><input type="number" min="0" id="number" name="area_se"</td>
+                </tr>
+                <tr>
+                    <td>Smoothness_se :</td>
+                    <td><input type="number" min="0" id="number" name="smoothness_se"</td>
+                </tr>
+                <tr>
+                    <td>Compactness_se :</td>
+                    <td><input type="number" min="0" id="number" name="compactness_se"</td>
+                </tr>
+                <tr>
+                    <td>Concavity_se :</td>
+                    <td><input type="number" min="0" id="number" name="concavity_se"</td>
+                </tr>
+                <tr>
+                    <td>Concave points_se :</td>
+                    <td><input type="number" min="0" id="number" name="concave points_se"</td>
+                </tr>
+                <tr>
+                    <td>Symmetry_se :</td>
+                    <td><input type="number" min="0" id="number" name="symmetry_se"</td>
+                </tr>
+                <tr>
+                    <td>Fractal_dimension_se :</td>
+                    <td><input type="number" min="0" id="number" name="fractal_dimension_se"</td>
+                </tr>
+                <tr>
+                    <td>Radius_worst :</td>
+                    <td><input type="number" min="0" id="number" name="radius_worst"</td>
+                </tr>
+                <tr>
+                    <td>Texture_worst :</td>
+                    <td><input type="number" min="0" id="number" name="texture_worst"</td>
+                </tr>
+                <tr>
+                    <td>Perimeter_worst :</td>
+                    <td><input type="number" min="0" id="number" name="perimeter_worst"</td>
+                </tr>
+                <tr>
+                    <td>Area_worst :</td>
+                    <td><input type="number" min="0" id="number" name="area_worst"</td>
+                </tr>
+
+                <tr>
+                    <td>Smoothness_worst :</td>
+                    <td><input type="number" min="0" id="number" name="smoothness_worst"</td>
+                </tr>
+                <tr>
+                    <td>Compactness_worst :</td>
+                    <td><input type="number" min="0" id="number" name="compactness_worst"</td>
+                </tr>
+                <tr>
+                    <td>Concavity_worst :</td>
+                    <td><input type="number" min="0" id="number" name="concavity_worst"</td>
+                </tr>
+                <tr>
+                    <td>Cocave points_worst :</td>
+                    <td><input type="number" min="0" id="number" name="concave points_worst"</td>
+                </tr>
+                <tr>
+                    <td>Symmetry_worst :</td>
+                    <td><input type="number" min="0" id="number" name="symmetry_worst"</td>
+                </tr>
+                <tr>
+                    <td>Fractal_dimension_worst :</td>
+                    <td><input type="number" min="0" id="number" name="fractal_dimension_worst"</td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <input type="submit" value="Predict">
+                        &nbsp;&nbsp;<input type="submit"
+                        value="Reset">
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </section>
+        <script>
+            var navLinks=document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right="0";
+            }
+            function hideMenu(){
+                navLinks.style.right="-200px";
+            }
+        </script>
+    </body>
+</html>
+
+
+

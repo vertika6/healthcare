@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <metaname="viewport" content="with=device-width,initial-scale=1.0">
+        <title>HEALTHCARE</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap" 
+        rel="stylesheet"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+        <body style="background-image: url('health.jpeg');"></body>>
+            <section class="header">
+                <nav>
+                    <img src="../static/logo.jpg"></a>
+                    <div class="nav-links" id="navLinks">
+                       <i class="fa fa-times" onclick="hideMenu()"></i>
+                       <ul>
+                        <li><a href="{{url_for('home')}}">HOME</a></li>  
+                        <li><a href="{{url_for('cancer')}}">CANCER </a></li> 
+                        <li><a href="{{url_for('heart')}}">HEART </a></li>
+                       
+                        <li><a href="{{url_for('diabetes')}}">DIABETES</a></li> 
+                        <li><a href="{{url_for('kidney')}}">KIDNEY</a></li>
+                        <li><a href="{{url_for('yoga')}}">YOGA</a></li> 
+                          
+                       </ul>    
+                    </div>  
+                    <i class="fa fa-bars" onclick="showMenu()" ></i>  
+                </nav>
+                <div class="text-box">
+                    <h1>WELCOME</h1>
+                    <p> Providing health care services means "the timely use of personal health services to achieve the best possible health outcomes".</p>
+                    <h1>OVERVIEW</h1>
+                    <p>This application  is designed to cope up with the medical problems that arise due to lack of proper and timely checkup.</p>
+                    <p>It uses machine learning to solve these issues and is beneficial to a huge extent.</p>
+                    <h1>BENEFITS</h1>
+                    <p>Economical</p>
+                    <p>Time efficient</p>
+                    <p>Blessing in Remote Areas</p>
+                    <p>Boon for Doctors and Medical Staff</p>
+                    <h1>CREATOR</h1>
+                    <p>Vertika Gupta</p>
+                    
+                    
+            </section>
+            
+            <!-----Javascript for toggle menu ---->
+            <script>
+                var navLinks=document.getElementById("navLinks");
+                function showMenu(){
+                    navLinks.style.right="0";
+                }
+                function hideMenu(){
+                    navLinks.style.right="-200px";
+                }
+                </script>
+                
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <metaname="viewport" content="with=device-width,initial-scale=1.0">
+        <title>HEALTHCARE</title>
+        <link rel="stylesheet"href="{{ url_for('static', filename='style.css') }}" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap" 
+        rel="stylesheet"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+        <body>
+            <section class="sub-header">
+                <nav>
+                    <img src="../static/logo.jpg"></a>
+                    <div class="nav-links" id="navLinks">
+                       <i class="fa fa-times" onclick="hideMenu()"></i>
+                       <ul>
+                        <li><a href="{{url_for('home')}}">HOME</a></li>  
+                        <li><a href="{{url_for('cancer')}}">CANCER </a></li> 
+                        <li><a href="{{url_for('heart')}}">HEART </a></li>
+                       
+                        <li><a href="{{url_for('diabetes')}}">DIABETES</a></li> 
+                        <li><a href="{{url_for('kidney')}}">KIDNEY</a></li>
+                       
+                        <li><a href="{{url_for('yoga')}}">YOGA</a></li> 
+                          
+                       </ul>    
+                    </div>  
+                    <i class="fa fa-bars" onclick="showMenu()" ></i>  
+                </nav>
+            </section>   
+            
+                    
+                    
+            
+            <!-------About---->
+            <section class="about">
+                <h1>YOGA</h1>
+                <h3>Ideal Way Of Life</h3>
+                <p>Yoga is a systematic practice of physical exercise, breath control, relaxation, diet control, and positive thinking and meditation aimed at developing harmony in the body, mind, and environment. The practice entails low-impact physical activity, postures (called asanas), breathing techniques (pranayama), relaxation, and meditation. Most people are familiar with the physical poses or yoga positions but don't know that yoga involves so much more.                            
+                   Some yoga postures have been shown below which helps to cure the diseases effectively. </p>
+                <div class="row">
+                    <div class="yoga">
+                        <h2>YOGA FOR HEALTHY HEART</h2>
+                        <h3>Utthita Trikonasana</h3>
+                        <a href="hyoga1.html"><img src="../static/trikonasana.jpeg"></a>
+                        
+                        <h3>Paschimottanasana</h3>
+                        <a href="hyoga2.html"><img src="../static/Paschimottanasana.jpeg"></a>
+
+                        <h3>Gomukhasana</h3>
+                        <a href="hyoga3.html"><img src="../static/Gomukhasana.jpeg"></a>
+
+                        <h2>YOGA FOR HEALTHY KIDNEY</h2>
+                        <h3>Vajrasana</h3>
+                        <a href="kyoga1.html"><img src="../static/vajirasana.jpeg"></a>
+                          
+                        <h3>Chakrasana</h3>
+                        <a href="kyoga2.html"><img src="../static/chakrasana.jpeg"></a>
+
+                        <h2>YOGA FOR HEALTHY LIVER</h2>
+                        <h3>Shalabasana</h3>
+                        <a href="lyoga1.html"><img src="../static/Shalabasana.jpeg"></a>
+
+                        <h3>Adomukhi Svanasana</h3>
+                        <a href="lyoga2.html"><img src="../static/Adomukhi Svanasana.jpeg"></a>
+
+                        <h2>YOGA TO CURE DIABETES</h2>
+                        <h3>Folded leg Lumbar stretch</h3>
+                        <a href="dyoga1.html"><img src="../static/lumbarstretch.jpeg"></a>
+
+                        <h3>Dhanurasana</h3>
+                        <a href="dyoga2.html"><img src="../static/Dhanurasana.jpeg"></a>
+
+                        <h3>Paschimottanasana</h3>
+                        <a href="dyoga3.html"><img src="../static/Paschimottanasana1.jpeg"></a>
+
+                        <h2>YOGA TO CURE PNEUMONIA</h2>
+                        <h3>Savithri asana</h3>
+                        <a href="pyoga1.html"><img src="../static/Savithri asana.jpeg"></a>
+                        
+                        <h3>Kapal Bhati</h3>
+                        <a href="pyoga2.html"><img src="../static/Kapal Bhati.jpeg"</a>
+
+                        </div>
+                        </div>
+            </section>
+            <!-----------cancer-->
+            
+
+
+
+
+
+
+
+                 <!-----Javascript for toggle menu ---->
+            <script>
+                var navLinks=document.getElementById("navLinks");
+                function showMenu(){
+                    navLinks.style.right="0";
+                }
+                function hideMenu(){
+                    navLinks.style.right="-200px";
+                }
+                </script>
+                
+                
+
+
+
+        </body>
+</html>

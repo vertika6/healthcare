@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <metaname="viewport" content="with=device-width,initial-scale=1.0">
+        <title>Cancer</title>
+        <link rel="stylesheet"href="{{ url_for('static', filename='style.css') }}" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap" 
+        rel="stylesheet"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+        <body>
+            <section class="sub-header">
+                <nav>
+                    <img src="../static/logo.jpg"></a>
+                    <div class="nav-links" id="navLinks">
+                       <i class="fa fa-times" onclick="hideMenu()"></i>
+                       <ul>
+                        <li><a href="{{url_for('home')}}">HOME</a></li>  
+                        <li><a href="{{url_for('cancer')}}">CANCER </a></li> 
+                        <li><a href="{{url_for('heart')}}">HEART </a></li>
+                        <li><a href="{{url_for('diabetes')}}">DIABETES</a></li> 
+                        <li><a href="{{url_for('kidney')}}">KIDNEY</a></li>
+                        <li><a href="{{url_for('yoga')}}">YOGA</a></li> 
+                        </ul>    
+                    </div>  
+                    <i class="fa fa-bars" onclick="showMenu()" ></i>  
+                </nav>
+            </section>   
+        
+               
+   <div class="container"> 
+          <div style="background-color:rgb(233, 124, 200);">
+          <h2 style ="text-align:center"> RESULT :</h2><br>
+          <h3 style="text-align:center"> {{ prediction }}</h3>
+        <form action="http://localhost:5000/result",methods=['POST']>
+        </div>
+        </form>
+</header>

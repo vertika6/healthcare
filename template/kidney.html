@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <metaname="viewport" content="with=device-width,initial-scale=1.0">
+        <title>Cancer</title>
+        <link rel="stylesheet"href="{{ url_for('static', filename='style.css') }}" type="text/css">  
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap" 
+        rel="stylesheet"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+        <body>
+            <section class="sub-header">
+                <nav>
+                    <img src="../static/logo.jpg"></a>
+                    <div class="nav-links" id="navLinks">
+                       <i class="fa fa-times" onclick="hideMenu()"></i>
+                       <ul>
+                        <li><a href="{{url_for('home')}}">HOME</a></li>  
+                        <li><a href="{{url_for('cancer')}}">CANCER </a></li> 
+                        <li><a href="{{url_for('heart')}}">HEART </a></li>
+                       
+                        <li><a href="{{url_for('diabetes')}}">DIABETES</a></li> 
+                        <li><a href="{{url_for('kidney')}}">KIDNEY</a></li>
+                       
+                        <li><a href="{{url_for('yoga')}}">YOGA</a></li> 
+                          
+                       </ul>    
+                    </div>  
+                    <i class="fa fa-bars" onclick="showMenu()" ></i>  
+                </nav>
+            </section>   
+        <section class="cancer">
+            <form action="/result" method="POST">
+            <h1>Please Fill Out The Details</h1>
+            <table class="details" cell padding="10">
+                <tr>
+                    <td>Age :</td>
+                    <td><input type="number" min="0" id="number" name="age"</td>
+                </tr>
+                <tr>
+                    <td>Blood Pressure :</td>
+                    <td><input type="number" min="0" id="number" name="bp"</td>
+                </tr>
+
+                <tr>
+                    <td><label for="sg">Specific Gravity :</label></td>
+                    <td>
+                    <select id="number" name="sg">
+                        <option value="1.005">1.005</option>
+                        <option value="1.010">1.010</option>
+                        <option value="1.015">1.015</option>
+                        <option value="1.020">1.020</option>
+                        <option value="1.025">1.025</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><label for="al">Albumin :</label></td>
+                    <td>
+                        <select id="number" name="al">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="su">Sugar :</label></td>
+                    <td>
+                        <select id="number" name="su">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>BGR :</td>
+                    <td><input type="number" min="0" id="number" name="bgr"</td>
+                </tr>
+                <tr>
+                    <td>Blood Urea :</td>
+                    <td><input type="number" min="0" id="number" name="bu"</td>
+                </tr>
+                <tr>
+                    <td>Serum Creatinine :</td>
+                    <td><input type="number" min="0" id="number" name="sc"</td>
+                </tr>
+                <tr>
+                    <td>Sodium :</td>
+                    <td><input type="number" min="0" id="number" name="sod"</td>
+                </tr>
+                <tr>
+                    <td>Potassium :</td>
+                    <td><input type="number" min="0" id="number" name="pot"</td>
+                </tr>
+                <tr>
+                    <td>Hemoglobin :</td>
+                    <td><input type="number" min="0" id="number" name="hemo"</td>
+                </tr>
+                <tr>
+                    <td>Packed Cell Volume :</td>
+                    <td><input type="number" min="0" id="number" name="pcv"</td>
+                </tr>
+                <tr>
+                    <td>WBC :</td>
+                    <td><input type="number" min="0" id="number" name="wc"</td>
+                </tr>
+                <tr>
+                    <td>RBC Count :</td>
+                    <td><input type="number" min="0" id="number" name="rc"</td>
+                </tr>
+                <tr>
+                    <td><label for="rbc">RBC :</label></td>
+                    <td>
+                        <select id="number" name="rbc_normal">
+                            <option value="1">Normal</option>
+                            <option value="0">Abnormal</option>
+                           
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="pc">Pus Cell :</label></td>
+                    <td>
+                        <select id="number" name="pc_normal">
+                            <option value="1">Normal</option>
+                            <option value="0">Abnormal</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="pcc">PCC :</label></td>
+                    <td>
+                        <select id="number" name="pcc_normal">
+                            <option value="1">Normal</option>
+                            <option value="0">Abnormal</option>
+                           
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ba">Bacteria :</label></td>
+                    <td>
+                        <select id="number" name="ba_present">
+                            <option value="1">Present</option>
+                            <option value="0">Absent</option>                           
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="htn">Hypertension :</label></td>
+                    <td>
+                    <select id="number" name="htn_yes">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="dm">Diabetes Mellitus :</label></td>
+                    <td>
+                    <select id="number" name="dm_yes">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cad">Coronary Artery Disease:</label></td>
+                    <td>
+                    <select id="number" name="cad_yes">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    </td>
+                </tr> 
+                <tr>
+                    <td><label for="appet">Appetite :</label></td>
+                    <td>
+                    <select id="number" name="appet_poor">
+                        <option value="0">Good</option>
+                        <option value="1">Poor</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="pe">Pedal Edema :</label></td>
+                    <td>
+                    <select id="number" name="pe_yes">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ane">Anemia :</label></td>
+                    <td>
+                    <select id="number" name="ane_yes">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    </td>
+                </tr>   
+                <tr>
+                    <td align="center" colspan="2">
+                        <input type="submit" value="Predict">
+                        &nbsp;&nbsp;<input type="submit"
+                        value="Reset">
+                    </td>
+                </tr>
+                
+            </table>
+            </form>
+        </section>
+        <script>
+            var navLinks=document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right="0";
+            }
+            function hideMenu(){
+                navLinks.style.right="-200px";
+            }
+        </script>
+    </body>
+</html>
