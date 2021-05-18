@@ -11,6 +11,9 @@ app.config['SECRET_KEY']='5791628bb0b13ce0c676dfde280ba245'
 
 
 @app.route("/",methods=['GET'])
+def homepage():
+    return render_template("home.html")
+
 
 @app.route("/home")
 def home():
